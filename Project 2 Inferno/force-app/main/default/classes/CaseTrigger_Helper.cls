@@ -13,8 +13,8 @@ public with sharing class CaseTrigger_Helper {
         //Get the Streaming Tier of the movie
         //Get the Streaming Tier of the account
         for (Case c: caseList){
-            complaintMovie = c.Streaming_Content__c;
-            complaintTier = c.ProductId.Family;
+            complaintMovie = c.Streaming_Content__r;
+            complaintTier = c.ProductId__r.Family;
             //If the Account is not of a correct Tier to view the Content
             //Mark the case with an error
             switch on complaintMovie.Tier__c {
@@ -49,11 +49,11 @@ public with sharing class CaseTrigger_Helper {
         //Check how many cases have marked Video Quality as the issue
         for(Case c: caseList){
             complaints = 0;
-            caseVideo = c.Streaming_Content__c;
+            caseVideo = c.Streaming_Content__r;
             for (Case c2: caseList){
-                if (c2.Streaming_Content__c == caseVideo){
+                if (c2.Streaming_Content__r == caseVideo){
                     if (c2.Case_Subject__c == 'Video Quality'){
-                        complaints++
+                        complaints++;
                     }
                 }
             }

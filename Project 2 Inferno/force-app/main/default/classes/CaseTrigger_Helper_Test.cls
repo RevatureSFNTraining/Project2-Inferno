@@ -10,7 +10,7 @@ public class CaseTrigger_Helper_Test {
 
         Streaming_Content__c badVideo;
         Streaming_Content__c freeVideo = new Streaming_Content__c(Tier__c='Free');
-        Streaming_Content__c payVideo = = new Streaming_Content__c(Tier__c='Pay');
+        Streaming_Content__c payVideo = new Streaming_Content__c(Tier__c='Pay');
         Streaming_Content__c premVideo = new Streaming_Content__c(Tier__c='Premium');
         //For Negative Testing
         Streaming_Content__c brokeVideo = new Streaming_Content__c(Tier__c='Broke');
