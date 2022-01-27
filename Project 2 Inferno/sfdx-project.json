@@ -3,12 +3,12 @@
     {
       "path": "force-app",
       "default": true
-    }, 
+    },
     {
-      "path": "Main"
+        "path": "Main"
     }
   ],
-  "name": "Project 2 Inferno",
+  "name": "P2 Main",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "52.0"
