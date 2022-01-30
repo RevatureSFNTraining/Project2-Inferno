@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <lightning-record-form
+            object-api-name={objectApiName}
+            fields={fields}
+            onsubmit={handleSubmit}>
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card>
+        <lightning-record-view-form
+            object-api-name={userApiName}
+            record-id={currentUserId}>
+            <lightning-output-field field-name={user_id}></lightning-output-field>
+            <lightning-output-field field-name={user_name}></lightning-output-field>
+            <lightning-output-field field-name={user_role}></lightning-output-field>
+            <lightning-output-field field-name={user_profile}></lightning-output-field>
+            <lightning-output-field field-name={user_username}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>
