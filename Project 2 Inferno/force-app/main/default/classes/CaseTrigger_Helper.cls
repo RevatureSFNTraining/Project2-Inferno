@@ -5,16 +5,27 @@ public with sharing class CaseTrigger_Helper {
     //Ensure that a case is only created for
     //Streaming Content that the user can view
     public static void CheckAccountTier(List<Case> caseList){
+
         //Variables
+        List<Product2> productList = [SELECT ID, Family FROM Product2];
         Streaming_Content__c complaintMovie;
         string complaintTier;
+        Product2 complaintProduct;
+        ID complaintID;
 
         //For Every Case
-        //Get the Streaming Tier of the movie
-        //Get the Streaming Tier of the account
+            //Get the Case's Streaming content
+            //Get the Product ID Associated with the case
+            //Use the Product ID to find the Subscription
         for (Case c: caseList){
             complaintMovie = c.Streaming_Content__r;
-            complaintTier = c.ProductId__r.Family;
+            complaintID = c.ProductId;
+            for (Product2 p : productList){
+                if (complaintID == p.Id){
+                    complaintProduct = p;
+                }
+            }
+            complaintTier = complaintProduct.Family;
             //If the Account is not of a correct Tier to view the Content
             //Mark the case with an error
             switch on complaintMovie.Tier__c {
