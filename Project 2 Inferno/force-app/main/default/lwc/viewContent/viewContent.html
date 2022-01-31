@@ -2,10 +2,18 @@
     <div>
         <img src=movieURL/>
         <lightning-button-group>
-            <lightning-button label="Play"></lightning-button>
-            <lightning-button label="Pause"></lightning-button>
-            <lightning-button label="Mute"></lightning-button>
-            <lightning-button label="Unmute"></lightning-button>
+            <lightning-button label="Play"
+                            if:true={playing}
+                            onclick={togglePlay}></lightning-button>
+            <lightning-button label="Pause"
+                            if:false={playing}
+                            onclick={togglePlay}></lightning-button>
+            <lightning-button label="Mute"
+                            if:true={muted}
+                            onclick={toggleMute}></lightning-button>
+            <lightning-button label="Unmute"
+                            if:false={muted}
+                            onclick={toggleMute}></lightning-button>
             <lightning-progress-bar value="2" size="large"></lightning-progress-bar>
         </lightning-button-group>
     </div>
