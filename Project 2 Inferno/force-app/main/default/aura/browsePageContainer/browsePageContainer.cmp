@@ -5,4 +5,14 @@
                     
     <!--<aura:handler event="c:SearchPassingEvent"
                     action="{!c.handleSearch}"/>-->
+    <aura:if isTrue="{!c.checkSearch}">
+        <!--<c:MovieReel movieSearch="true" movieQuery="{!searchString}"></c:MovieReel>
+        <c:MovieReel></c:MovieReel>
+        <c:MovieReel></c:MovieReel>-->
+        <aura:set attribute="else">
+            <!--<c:MovieReel movieSearch="false"></c:MovieReel>
+            <c:MovieReel movieSearch="false"></c:MovieReel>
+            <c:MovieReel movieSearch="false"></c:MovieReel>-->
+        </aura:set>
+    </aura:if>
 </aura:component>	
