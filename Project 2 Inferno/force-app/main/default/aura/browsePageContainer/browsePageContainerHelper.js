@@ -1,5 +1,9 @@
 ({
-    helperMethod : function() {
+    searchHelper : function() {
 
+    },
+
+    displayHelper : function() {
+        
     }
 })

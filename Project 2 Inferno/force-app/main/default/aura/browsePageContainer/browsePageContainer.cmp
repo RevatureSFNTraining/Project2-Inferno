@@ -1,3 +1,8 @@
 <aura:component>
-
+    <aura:attribute name="searchString" 
+                    type="String" 
+                    default=""/>
+                    
+    <aura:handler event="c:SearchPassingEvent"
+                    action="{c.handleSearch}"/>
 </aura:component>	
