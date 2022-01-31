@@ -1,11 +1,11 @@
 {
   "packageDirectories": [
     {
+      "path": "Main"
+    },
+    {
       "path": "force-app",
       "default": true
-    }, 
-    {
-      "path": "Main"
     }
   ],
   "name": "Project 2 Inferno",

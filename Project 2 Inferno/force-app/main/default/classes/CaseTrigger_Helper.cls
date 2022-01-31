@@ -9,7 +9,7 @@ public with sharing class CaseTrigger_Helper {
         //Variables
         List<Product2> productList = [SELECT ID, Family FROM Product2];
         Streaming_Content__c complaintMovie;
-        string complaintTier;
+        string complaintTier = 'Free';
         Product2 complaintProduct;
         ID complaintID;
 
@@ -18,14 +18,16 @@ public with sharing class CaseTrigger_Helper {
             //Get the Product ID Associated with the case
             //Use the Product ID to find the Subscription
         for (Case c: caseList){
-            complaintMovie = c.Streaming_Content__r;
+            complaintMovie = c.Streaming_Content__r;    
             complaintID = c.ProductId;
             for (Product2 p : productList){
                 if (complaintID == p.Id){
                     complaintProduct = p;
                 }
             }
-            complaintTier = complaintProduct.Family;
+            if (complaintProduct != null){
+                complaintTier = complaintProduct.Family;
+            }
             //If the Account is not of a correct Tier to view the Content
             //Mark the case with an error
             switch on complaintMovie.Tier__c {

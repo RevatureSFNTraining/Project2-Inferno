@@ -3,6 +3,6 @@
                     type="String" 
                     default=""/>
                     
-    <aura:handler event="c:SearchPassingEvent"
-                    action="{c.handleSearch}"/>
+    <!--<aura:handler event="c:SearchPassingEvent"
+                    action="{!c.handleSearch}"/>-->
 </aura:component>	
