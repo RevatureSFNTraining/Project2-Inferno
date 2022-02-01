@@ -1,0 +1,9 @@
+<template>
+    <lightning-input name="emailinput" type="text" label="Email" placeholder="you@example.org" onchange={emailChange}></lightning-input>
+    <lightning-input type="password" label="Password" onchange={passwordChange}></lightning-input>
+    <lightning-button onclick={handleClick}>Submit</lightning-button>
+    <p>{id}</p>
+    <template if:true={myaccount}>
+        <p>{id}</p>
+    </template>
+</template>
