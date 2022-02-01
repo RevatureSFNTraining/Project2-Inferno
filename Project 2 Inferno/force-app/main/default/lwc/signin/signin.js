@@ -31,9 +31,8 @@ export default class Signin extends LightningElement {
     async handleClick(event){
         let myAccount = { 'sobjectType': 'Account' };
         this.email = this.tempemail;
-        await getAccount({email: this.email}).then(result => {this.id = result;}).catch(error => {this.error = error;});
-        console.log(this.id);
-        if(!id==null){
+        await getAccount({email: this.email, password: this.password}).then(result => {this.id = result;}).catch(error => {this.error = error;});
+        if(!this.id==null){
             this.dispatchEvent(new CustomEvent('signin', {detail: this.id}));
         }
 
