@@ -1,0 +1,11 @@
+<!--Israel Escobedo, Project 2, 02/03/2022-->
+<!--Aura component of the Account page of the Jolly website.-->
+
+<aura:component>
+    <!--Title of of webapage.-->
+    <h1>Jolly Account</h1>
+
+    <!--Button logs user out of the Account page to the Browser page.-->
+    <lightning:button variant="base" label="Log Out" onclick="{! c.handleLogOut}"/>
+
+</aura:component>	
