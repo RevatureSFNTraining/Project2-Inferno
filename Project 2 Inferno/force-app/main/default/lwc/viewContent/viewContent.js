@@ -2,7 +2,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class ViewContent extends LightningElement {
     @api
-    movieURL = "";
+    movieURL = "https://i.imgur.com/XuC2TWE.jpeg";
 
     playing = false;
     muted = false;

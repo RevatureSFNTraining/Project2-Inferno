@@ -19,13 +19,18 @@ public class CaseTrigger_Helper_Test {
     public static void AccFreeMovFree(){
         Product2 freeSub = new Product2(Name = 'Free Subscription');
         freeSub.Family = 'Free';
-        Streaming_Content__c freeVideo = new Streaming_Content__c();
-        freeVideo.Tier__c = 'Free';
+        Streaming_Content__c freeVideo = new Streaming_Content__c(Tier__c = 'Free');
         Database.insert(freeSub);
         Database.insert(freeVideo);
-        Case c = new Case(Streaming_Content__r = freeVideo, ProductId = freeSub.Id);
+        Case c = new Case(Streaming_Content__r = freeVideo,
+                             Streaming_Content__c = freeVideo.Id,
+                             ProductId = freeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
-        system.assert(sr.isSuccess());
     }
     //Account Tier: Free
     //Movie Subscription Tier: Pay
@@ -33,9 +38,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccFreeMovPay(){
         Product2 freeSub = new Product2(Name = 'Free Subscription');
         freeSub.Family = 'Free';
-        Streaming_Content__c payVideo = new Streaming_Content__c();
-        payVideo.Tier__c = 'Pay';
-        Case c = new Case(Streaming_Content__r = payVideo, ProductId = freeSub.Id);
+        Streaming_Content__c payVideo = new Streaming_Content__c(Tier__c = 'Pay');
+        Database.insert(freeSub);
+        Database.insert(payVideo);
+        Case c = new Case(Streaming_Content__r = payVideo,
+                             Streaming_Content__c = payVideo.Id,
+                             ProductId = freeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -45,9 +58,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccFreeMovPrem(){
         Product2 freeSub = new Product2(Name = 'Free Subscription');
         freeSub.Family = 'Free';
-        Streaming_Content__c premVideo = new Streaming_Content__c();
-        premVideo.Tier__c = 'Premium';
-        Case c = new Case(Streaming_Content__r = premVideo, ProductId = freeSub.Id);
+        Streaming_Content__c premVideo = new Streaming_Content__c(Tier__c = 'Premium');
+        Database.insert(freeSub);
+        Database.insert(premVideo);
+        Case c = new Case(Streaming_Content__r = premVideo,
+                             Streaming_Content__c = premVideo.Id,
+                             ProductId = freeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -57,9 +78,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccFreeMovInval(){
         Product2 freeSub = new Product2(Name = 'Free Subscription');
         freeSub.Family = 'Free';
-        Streaming_Content__c brokeVideo = new Streaming_Content__c();
-        brokeVideo.Tier__c = 'HoHoHo';
-        Case c = new Case(Streaming_Content__r = brokeVideo, ProductId = freeSub.Id);
+        Streaming_Content__c brokeVideo = new Streaming_Content__c(Tier__c = 'HoHoHo');
+        Database.insert(freeSub);
+        Database.insert(brokeVideo);
+        Case c = new Case(Streaming_Content__r = brokeVideo,
+                             Streaming_Content__c = brokeVideo.Id,
+                             ProductId = freeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -73,9 +102,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPayMovFree(){
         Product2 paySub  = new Product2(Name = 'Paid Subscription');
         paySub.Family = 'Pay';
-        Streaming_Content__c freeVideo = new Streaming_Content__c();
-        freeVideo.Tier__c = 'Free';
-        Case c = new Case(Streaming_Content__r = freeVideo, ProductId = paySub.Id);
+        Streaming_Content__c freeVideo = new Streaming_Content__c(Tier__c = 'Free');
+        Database.insert(paySub);
+        Database.insert(freeVideo);
+        Case c = new Case(Streaming_Content__r = freeVideo,
+                             Streaming_Content__c = freeVideo.Id,
+                             ProductId = paySub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -85,9 +122,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPayMovPay(){
         Product2 paySub  = new Product2(Name = 'Paid Subscription');
         paySub.Family = 'Pay';
-        Streaming_Content__c payVideo = new Streaming_Content__c();
-        payVideo.Tier__c = 'Pay';
-        Case c = new Case(Streaming_Content__r = payVideo, ProductId = paySub.Id);
+        Streaming_Content__c payVideo = new Streaming_Content__c(Tier__c = 'Pay');
+        Database.insert(paySub);
+        Database.insert(payVideo);
+        Case c = new Case(Streaming_Content__r = payVideo,
+                             Streaming_Content__c = payVideo.Id,
+                             ProductId = paySub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -97,9 +142,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPayMovPrem(){
         Product2 paySub  = new Product2(Name = 'Paid Subscription');
         paySub.Family = 'Pay';
-        Streaming_Content__c premVideo = new Streaming_Content__c();
-        premVideo.Tier__c = 'Premium';
-        Case c = new Case(Streaming_Content__r = premVideo, ProductId = paySub.Id);
+        Streaming_Content__c premVideo = new Streaming_Content__c(Tier__c = 'Premium');
+        Database.insert(paySub);
+        Database.insert(premVideo);
+        Case c = new Case(Streaming_Content__r = premVideo,
+                             Streaming_Content__c = premVideo.Id,
+                             ProductId = paySub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -109,9 +162,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPayMovInval(){
         Product2 paySub  = new Product2(Name = 'Paid Subscription');
         paySub.Family = 'Pay';
-        Streaming_Content__c brokeVideo = new Streaming_Content__c();
-        brokeVideo.Tier__c = 'HoHoHo';
-        Case c = new Case(Streaming_Content__r = brokeVideo, ProductId = paySub.Id);
+        Streaming_Content__c brokeVideo = new Streaming_Content__c(Tier__c = 'HoHoHo');
+        Database.insert(paySub);
+        Database.insert(brokeVideo);
+        Case c = new Case(Streaming_Content__r = brokeVideo,
+                             Streaming_Content__c = brokeVideo.Id,
+                             ProductId = paySub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -125,9 +186,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPremMovFree(){
         Product2 premSub  = new Product2(Name = 'Jolliest (Premium) Subscription');
         premSub.Family = 'Premium';
-        Streaming_Content__c freeVideo = new Streaming_Content__c();
-        freeVideo.Tier__c = 'Free';
-        Case c = new Case(Streaming_Content__r = freeVideo, ProductId = premSub.Id);
+        Streaming_Content__c freeVideo = new Streaming_Content__c(Tier__c = 'Free');
+        Database.insert(premSub);
+        Database.insert(freeVideo);
+        Case c = new Case(Streaming_Content__r = freeVideo,
+                             Streaming_Content__c = freeVideo.Id,
+                             ProductId = premSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -137,9 +206,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPremMovPay(){
         Product2 premSub  = new Product2(Name = 'Jolliest (Premium) Subscription');
         premSub.Family = 'Premium';
-        Streaming_Content__c payVideo = new Streaming_Content__c();
-        payVideo.Tier__c = 'Pay';
-        Case c = new Case(Streaming_Content__r = payVideo, ProductId = premSub.Id);
+        Streaming_Content__c payVideo = new Streaming_Content__c(Tier__c = 'Pay');
+        Database.insert(premSub);
+        Database.insert(payVideo);
+        Case c = new Case(Streaming_Content__r = payVideo,
+                             Streaming_Content__c = payVideo.Id,
+                             ProductId = premSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -149,9 +226,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPremMovPrem(){
         Product2 premSub  = new Product2(Name = 'Jolliest (Premium) Subscription');
         premSub.Family = 'Premium';
-        Streaming_Content__c premVideo = new Streaming_Content__c();
-        premVideo.Tier__c = 'Premium';
-        Case c = new Case(Streaming_Content__r = premVideo, ProductId = premSub.Id);
+        Streaming_Content__c premVideo = new Streaming_Content__c(Tier__c = 'Premium');
+        Database.insert(premSub);
+        Database.insert(premVideo);
+        Case c = new Case(Streaming_Content__r = premVideo,
+                             Streaming_Content__c = premVideo.Id,
+                             ProductId = premSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -161,9 +246,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccPremMovInval(){
         Product2 premSub  = new Product2(Name = 'Jolliest (Premium) Subscription');
         premSub.Family = 'Premium';
-        Streaming_Content__c brokeVideo = new Streaming_Content__c();
-        brokeVideo.Tier__c = 'HoHoHo';
-        Case c = new Case(Streaming_Content__r = brokeVideo, ProductId = premSub.Id);
+        Streaming_Content__c brokeVideo = new Streaming_Content__c(Tier__c = 'HoHoHo');
+        Database.insert(premSub);
+        Database.insert(brokeVideo);
+        Case c = new Case(Streaming_Content__r = brokeVideo,
+                             Streaming_Content__c = brokeVideo.Id,
+                             ProductId = premSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(sr.isSuccess());
     }
@@ -177,9 +270,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccInvalMovFree(){
         Product2 brokeSub = new Product2(Name = 'Illegal Subscription');
         brokeSub.Family = 'Orphan';
-        Streaming_Content__c freeVideo = new Streaming_Content__c();
-        freeVideo.Tier__c = 'Free';
-        Case c = new Case(Streaming_Content__r = freeVideo, ProductId = brokeSub.Id);
+        Streaming_Content__c freeVideo = new Streaming_Content__c(Tier__c = 'Free');
+        Database.insert(brokeSub);
+        Database.insert(freeVideo);
+        Case c = new Case(Streaming_Content__r = freeVideo,
+                             Streaming_Content__c = freeVideo.Id,
+                             ProductId = brokeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -189,9 +290,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccInvalMovPay(){
         Product2 brokeSub = new Product2(Name = 'Illegal Subscription');
         brokeSub.Family = 'Orphan';
-        Streaming_Content__c payVideo = new Streaming_Content__c();
-        payVideo.Tier__c = 'Pay';
-        Case c = new Case(Streaming_Content__r = payVideo, ProductId = brokeSub.Id);
+        Streaming_Content__c payVideo = new Streaming_Content__c(Tier__c = 'Pay');
+        Database.insert(brokeSub);
+        Database.insert(payVideo);
+        Case c = new Case(Streaming_Content__r = payVideo,
+                             Streaming_Content__c = payVideo.Id,
+                             ProductId = brokeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -201,9 +310,17 @@ public class CaseTrigger_Helper_Test {
     public static void AccInvalMovPrem(){
         Product2 brokeSub = new Product2(Name = 'Illegal Subscription');
         brokeSub.Family = 'Orphan';
-        Streaming_Content__c premVideo = new Streaming_Content__c();
-        premVideo.Tier__c = 'Premium';
-        Case c = new Case(Streaming_Content__r = premVideo, ProductId = brokeSub.Id);
+        Streaming_Content__c premVideo = new Streaming_Content__c(Tier__c = 'Premium');
+        Database.insert(brokeSub);
+        Database.insert(premVideo);
+        Case c = new Case(Streaming_Content__r = premVideo,
+                             Streaming_Content__c = premVideo.Id,
+                             ProductId = brokeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
@@ -213,13 +330,20 @@ public class CaseTrigger_Helper_Test {
     public static void AccInvalMovInval(){
         Product2 brokeSub = new Product2(Name = 'Illegal Subscription');
         brokeSub.Family = 'Orphan';
-        Streaming_Content__c brokeVideo = new Streaming_Content__c();
-        brokeVideo.Tier__c = 'HoHoHo';
-        Case c = new Case(Streaming_Content__r = brokeVideo, ProductId = brokeSub.Id);
+        Streaming_Content__c brokeVideo = new Streaming_Content__c(Tier__c = 'HoHoHo');
+        Database.insert(brokeSub);
+        Database.insert(brokeVideo);
+        Case c = new Case(Streaming_Content__r = brokeVideo,
+                             Streaming_Content__c = brokeVideo.Id,
+                             ProductId = brokeSub.Id,
+                             Type = 'Electronic',
+                             Subject = 'I was made for during Test Execution',
+                             Case_Subject__c = 'Technical',
+                             Status = 'New',
+                             Origin = 'Web' );
         Database.saveResult sr = Database.insert(c, false);
         system.assert(!sr.isSuccess());
     }
-
 
 
     //Check Video Reports Tests
@@ -231,7 +355,9 @@ public class CaseTrigger_Helper_Test {
         List<Case> allCases = new List<Case>();
         Streaming_Content__c badVideo = new Streaming_Content__c(Title__c='Steps on the Roof');
         for(Integer i = 0; i < 10; i++){
-            Case c = new Case(Case_Subject__c='Video Quality', Streaming_Content__r=badVideo);
+            Case c = new Case(Case_Subject__c='Video Quality', 
+                                Streaming_Content__r = badVideo,
+                                Streaming_Content__c = badVideo.Id);
             allCases.add(c);
         }
         Database.insert(allCases, false);
@@ -243,7 +369,9 @@ public class CaseTrigger_Helper_Test {
         List<Case> allCases = new List<Case>();
         Streaming_Content__c badVideo = new Streaming_Content__c(Title__c='Under the Mistletoe');
         for(Integer i = 0; i < 8; i++){
-            Case c = new Case(Case_Subject__c='Video Quality', Streaming_Content__r=badVideo);
+            Case c = new Case(Case_Subject__c='Video Quality', 
+                                Streaming_Content__r = badVideo,
+                                Streaming_Content__c = badVideo.Id);
             allCases.add(c);
         }
         Database.insert(allCases, false);
@@ -255,7 +383,9 @@ public class CaseTrigger_Helper_Test {
         List<Case> allCases = new List<Case>();
         Streaming_Content__c badVideo = new Streaming_Content__c(Title__c='Avalanche');
         for(Integer i = 0; i < 20; i++){
-            Case c = new Case(Case_Subject__c='Video Quality', Streaming_Content__r=badVideo);
+            Case c = new Case(Case_Subject__c='Video Quality', 
+                                Streaming_Content__r = badVideo,
+                                Streaming_Content__c = badVideo.Id);
             allCases.add(c);
         }
         Database.insert(allCases, false);
@@ -267,7 +397,9 @@ public class CaseTrigger_Helper_Test {
         List<Case> allCases = new List<Case>();
         Streaming_Content__c badVideo = new Streaming_Content__c(Title__c='The Perfect Gift');
         for(Integer i = 0; i < 10; i++){
-            Case c = new Case(Case_Subject__c='Technical', Streaming_Content__r=badVideo);
+            Case c = new Case(Case_Subject__c='Video Quality', 
+                                Streaming_Content__r = badVideo,
+                                Streaming_Content__c = badVideo.Id);
             allCases.add(c);
         }
         Database.insert(allCases, false);
