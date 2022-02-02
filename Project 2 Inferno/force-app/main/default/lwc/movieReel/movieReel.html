@@ -1,16 +1,21 @@
 <template>
-    <h2>{genre}</h2>
-    <template if:true={movies}>
-        <template for:each={reelMovieList} for:item="movie">
-            <c-movie-card key={movie.ID}
-                           title={movie.Title__c}
-                           videourl={movie.Video_URL__c} 
-                           rating={movie.Viewer_Rating__c}
-                           movieid={movie.ID}
-                           onload={displayGenre}></c-movie-card>
+        <h4>{genre}</h4>
+        <template if:true={movies}>
+            <template for:each={reelMovieList} for:item="movie">
+                <c-movie-card key={movie.ID}
+                            title={movie.Title__c}
+                            videourl={movie.Video_URL__c} 
+                            rating={movie.Viewer_Rating__c}
+                            movieid={movie.ID}
+                            onload={displayGenre}
+                            height="20%"></c-movie-card>
+            </template>
+            <c-movie-card title="Won't You Spend One Last Christmas with Me?"
+                            videourl="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422"
+                            rating="5"
+                            height="20%"></c-movie-card>
         </template>
-    </template>
-    <template if:true={movies.error}>
-        {movies.error}
-    </template>
+        <template if:true={movies.error}>
+            {movies.error}
+        </template>
 </template>

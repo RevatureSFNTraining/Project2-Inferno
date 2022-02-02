@@ -1,7 +1,9 @@
 <template>
     <div onclick={handleSelection}>
-        <p>{title}</p>
-        <img src={videoURL}/>
-        <p>{rating}</p>
+        <lightning-card title={title}>
+            <img src={videoURL}
+            height="20%"/>
+            <p>{rating}</p>
+        </lightning-card>
     </div>
 </template>

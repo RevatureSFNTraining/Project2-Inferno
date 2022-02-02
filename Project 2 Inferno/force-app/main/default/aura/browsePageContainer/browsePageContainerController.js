@@ -9,7 +9,7 @@
     // },
 
     checkSearch : function (component, event, helper){
-        helper.checkSearch(component);
+        helper.checkSearch(component, event.data);
     },
 
     redirectSignUp : function (component, event, helper){

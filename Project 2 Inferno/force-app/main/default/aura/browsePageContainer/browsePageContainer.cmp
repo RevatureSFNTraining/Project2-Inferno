@@ -22,13 +22,13 @@
         label="Sign Up"></lightning:button>
     </div>
     <aura:if isTrue="{!searching}">
-        <c:movieReel movieQuery="{!searchString}" genre="Action"></c:movieReel>
-        <c:movieReel movieQuery="{!searchString}" genre="Comedy"></c:movieReel>
-        <c:movieReel movieQuery="{!searchString}" genre="SciFi"></c:movieReel>
+        <c:movieReel movieQuery="{!searchString}" genre="Action" height="20%"></c:movieReel>
+        <c:movieReel movieQuery="{!searchString}" genre="Comedy" height="20%"></c:movieReel>
+        <c:movieReel movieQuery="{!searchString}" genre="SciFi" height="20%"></c:movieReel>
         <aura:set attribute="else">
-            <c:movieReel genre="Action"></c:movieReel>
-            <c:movieReel genre="Comedy"></c:movieReel>
-            <c:movieReel genre="SciFi"></c:movieReel>
+            <c:movieReel genre="Action" height="20%"></c:movieReel>
+            <c:movieReel genre="Comedy" height="20%"></c:movieReel>
+            <c:movieReel genre="SciFi" height="20%"></c:movieReel>
         </aura:set>
     </aura:if>
     <!--Placement of Branding and Page Redirects-->
