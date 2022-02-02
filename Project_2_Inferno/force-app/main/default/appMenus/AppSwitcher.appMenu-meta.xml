@@ -60,8 +60,4 @@
         <name>standard__SalesforceCMS</name>
         <type>CustomApplication</type>
     </appMenuItems>
-    <appMenuItems>
-        <name>Jolly_Work_App</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
 </AppMenu>
