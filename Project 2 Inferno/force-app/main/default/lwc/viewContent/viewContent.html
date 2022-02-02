@@ -1,0 +1,20 @@
+<template>
+    <div onmovieselection={handleMovieSelection}>
+        <img src={movieURL}/>
+        <lightning-button-group>
+            <lightning-button label="Pause"
+                            if:true={playing}
+                            onclick={togglePlay}></lightning-button>
+            <lightning-button label="Play"
+                            if:false={playing}
+                            onclick={togglePlay}></lightning-button>
+            <lightning-button label="Volume Muted"
+                            if:true={muted}
+                            onclick={toggleMute}></lightning-button>
+            <lightning-button label="Volume Unmuted"
+                            if:false={muted}
+                            onclick={toggleMute}></lightning-button>
+            <lightning-progress-bar value="2" size="large"></lightning-progress-bar>
+        </lightning-button-group>
+    </div>
+</template>
