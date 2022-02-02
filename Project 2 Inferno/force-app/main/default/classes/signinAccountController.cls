@@ -16,28 +16,12 @@ public class signinAccountController {
     }
 
     @AuraEnabled(cacheable=false)
-    public static String makeAccount(string name, string email, string password, string nameoncard, 
-                                    string cardnumber, string cvv, string billingaddress){
-        Account acc = new Account();
-        acc.Name = name;
-        acc.Email__c = email;
-        acc.Password__c = password;
-        acc.Name_On_Card__c = nameoncard;
-        acc.Card_Number__c = cardnumber;
-        acc.CVV__c = cvv;
-        //acc.BillingAddress = billingaddress;
-        
-        acc.Membership_Status__c = 'Active';
-        acc.Card_Type__c = 'Visa';
-        acc.Expiration_Date__c = date.today().addDays(1);
-        acc.Card_Status__C = 'Active';
+    public static String makeAccount(string text){
+        List<Streaming_Content__c> searchresults = new List<Streaming_Content__c>();
+        text = String.escapeSingleQuotes(text);
+        querytext = '%'+text+'%';
 
-        Database.SaveResult sr = Database.insert(acc);
-        String newid = null;
-        if(sr.isSuccess()){
-            Account newacc = [SELECT id FROM Account WHERE email__c = :email LIMIT 1];
-            newid = newacc.id;
-        } else {System.debug(sr.getErrors());}
-        return newid;
+        searchresults = [SELECT Id FROM Streaming_Content__c WHERE Title__c LIKE :querytext];
+        
     }
 }
