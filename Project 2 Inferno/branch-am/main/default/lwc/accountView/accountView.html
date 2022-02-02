@@ -1,0 +1,19 @@
+<template>
+    <lightning-card class="cardStyles">
+        <h1>Your Account Information</h1>
+        <lightning-record-view-form
+            object-api-name={accountApiName}
+            record-id={currentAccountId}>
+            <lightning-output-field field-name={a_id}></lightning-output-field>
+            <lightning-output-field field-name={a_name}></lightning-output-field>
+            <lightning-output-field field-name={a_email}></lightning-output-field>
+            <lightning-output-field field-name={a_password}></lightning-output-field>
+            <lightning-output-field field-name={a_ownerId}></lightning-output-field>
+            <lightning-output-field field-name={a_membership}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+    <br>
+    <c-card-view></c-card-view>
+    <br>
+    <c-user-info></c-user-info>
+</template>

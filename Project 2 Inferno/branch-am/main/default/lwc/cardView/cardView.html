@@ -1,0 +1,14 @@
+<template>
+    <lightning-card class="cardStyles">
+        <h1>Card Information</h1>
+        <lightning-record-view-form
+            object-api-name={accountApiName}
+            record-id={currentAccountId}>
+            <lightning-output-field field-name={a_nameOnCard}></lightning-output-field>
+            <lightning-output-field field-name={a_cardNumber}></lightning-output-field>
+            <lightning-output-field field-name={a_cvv}></lightning-output-field>
+            <lightning-output-field field-name={a_cardExpiration}></lightning-output-field>
+            <lightning-output-field field-name={a_cardStatus}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>
