@@ -1,0 +1,37 @@
+/*Israel Escobedo, Project 2, 02/03/2022*/
+
+div{
+    background: #6F9CEB;
+}
+
+h1{
+    color: white;
+    font-size: 20px;
+    font-family:"XmasFont";
+}
+
+lightning-card{
+    --lwc-cardColorBackground: #6F9CEB;
+}
+
+p{
+    color: white;
+}
+
+p.message{
+    color: white;
+    font-size: 50px;
+}
+
+@font-face{
+    font-family:'XmasFont';
+    src: url('/resource/XmasFont/MountainsofChristmas-Bold.ttf') format('TrueType');
+}
+
+lightning-input-field{
+    --lwc-colorTextLabel: white;
+}
+
+lightning-button{
+    --lwc-colorTextDefault: white;
+}
