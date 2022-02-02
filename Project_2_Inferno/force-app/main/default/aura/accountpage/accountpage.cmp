@@ -5,6 +5,8 @@
     <!--Title of of webapage.-->
     <h1>Jolly Account</h1>
 
+    <!--<c.component/>-->
+
     <!--Button logs user out of the Account page to the Browser page.-->
     <lightning:button variant="base" label="Log Out" onclick="{! c.handleLogOut}"/>
 
