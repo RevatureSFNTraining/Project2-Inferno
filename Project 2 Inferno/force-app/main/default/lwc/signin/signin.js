@@ -45,4 +45,8 @@ export default class Signin extends LightningElement {
     passwordChange(event){
         this.password = event.detail.value;
     }
+
+    handleClick2(event){
+        this.dispatchEvent(new CustomEvent('toggle'));
+    }
 }
