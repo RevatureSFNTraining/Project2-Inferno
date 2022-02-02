@@ -9,6 +9,22 @@
 
     </lightning:card>
 
-    <!--<c.component/>-->
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-1">
+            <span><!--<c.userInfo/>--></span>   
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <span><!--<c.accountView/>--></span>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <span><!--<c.accountEdit/>--></span>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+            <span><!--<c.cardView/>--></span>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+            <span><!--<c.cardEdit/>--></span>
+        </div>
+    </div>
     
 </aura:component>	

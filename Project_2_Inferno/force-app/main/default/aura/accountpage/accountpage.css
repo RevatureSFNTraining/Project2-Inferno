@@ -4,16 +4,16 @@
     background-color: cornflowerblue;
     color: white;
     font-size: 60px;
-    font-family:'XmasFontBold';
-}
-
-@font-family{
-    font-family:'XmasFontBold';
-    src: url(/resource/XmasFontBold)
+    font-family:'XmasFont';
 }
 
 .THIS .greenbtn{
     background-color: green;
     color: white;
     float: right;
+}
+
+@font-face{
+    font-family:'XmasFont';
+    src: url('/resource/XmasFont/MountainsofChristmas-Bold.ttf') format('TrueType');
 }
