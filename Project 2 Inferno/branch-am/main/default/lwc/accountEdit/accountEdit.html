@@ -1,0 +1,12 @@
+<template>
+    <lightning-card class="cardStyles">
+        <h1>Edit Account Information</h1>
+        <lightning-record-form
+        object-api-name={accountApiName}
+        record-id={currentAccountId}
+        fields={fields}
+        ></lightning-record-form>
+    </lightning-card>
+    <br>
+    <c-card-edit></c-card-edit>
+</template>

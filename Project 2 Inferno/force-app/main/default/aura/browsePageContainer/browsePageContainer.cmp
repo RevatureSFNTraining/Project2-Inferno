@@ -1,0 +1,45 @@
+<aura:component>
+    <aura:attribute name="searchString" 
+                    type="String" 
+                    default=""/>
+
+    <aura:attribute name="searching"
+                    type="Boolean"
+                    default="false"/>
+                    
+    <!-- <aura:handler event="c:SearchPassingEvent"
+                    action="{!c.handleSearch}"/> -->
+
+    <!--Placement of Logo, Search Bar, and Redirect to SignUp-->
+    <div class="slds-grid slds-gutters">
+        <!--Logo 1/6-->
+        <img class="slds-col slds-size_1-of-6"/>
+        <!--Search Bar 2/3-->
+        <!--<c:searchBar class="slds-col slds-size_2-of-3"></c:searchBar>-->
+        <!--Redirect To SignUp 1/6-->
+        <lightning:button class="slds-col slds-size_1-of-6"
+        onclick="{!c.redirectSignUp}"
+        label="Sign Up"></lightning:button>
+    </div>
+    <aura:if isTrue="{!searching}">
+        <c:movieReel movieQuery="{!searchString}" genre="Action" height="20%"></c:movieReel>
+        <c:movieReel movieQuery="{!searchString}" genre="Comedy" height="20%"></c:movieReel>
+        <c:movieReel movieQuery="{!searchString}" genre="SciFi" height="20%"></c:movieReel>
+        <aura:set attribute="else">
+            <c:movieReel genre="Action" height="20%"></c:movieReel>
+            <c:movieReel genre="Comedy" height="20%"></c:movieReel>
+            <c:movieReel genre="SciFi" height="20%"></c:movieReel>
+        </aura:set>
+    </aura:if>
+    <!--Placement of Branding and Page Redirects-->
+    <div class="slds-grid">
+        <!--Page Redirect 1/3-->
+        <lightning:button class="slds-col slds-size_1-of-3"></lightning:button>
+        <!--Company Branding 1/3-->
+        <lightning:card class="slds-col slds-size_1-of-3"></lightning:card>
+        <!--Page Redirect 1/3-->
+        <lightning:button class="slds-col slds-size_1-of-3"
+        onclick="{!c.redirectHelp}"
+        label="Help"></lightning:button>
+    </div>
+</aura:component>

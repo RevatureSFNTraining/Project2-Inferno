@@ -1,0 +1,8 @@
+<template>
+    <lightning-card>
+        <lightning-record-form object-api-name="Account" fields={FIELDS} onsuccess={handleSuccess}>
+        </lightning-record-form>
+    </lightning-card>
+    <br><br>
+    <lightning-button label="Already have an account? Sign in!" onclick={handleClick}></lightning-button>
+</template>
