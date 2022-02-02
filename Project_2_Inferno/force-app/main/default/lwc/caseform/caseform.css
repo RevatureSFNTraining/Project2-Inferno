@@ -1,0 +1,14 @@
+/*Israel Escobedo, Project 2, 02/03/2022*/
+
+div{
+    background: #6F9CEB;
+}
+
+p{
+    color: white;
+}
+
+p.message{
+    color: white;
+    font-size: 50px;
+}

@@ -2,13 +2,13 @@
 <!--Aura component of the Account page of the Jolly website.-->
 
 <aura:component>
-    <div>
-        <!--Title of of webapage.-->
-        <h1>Jolly Account</h1>
-
-        <!--<c.component/>-->
+    <lightning:card title="Jolly Account">
 
         <!--Button logs user out of the Account page to the Browser page.-->
-        <lightning:button variant="base" label="Log Out" onclick="{! c.handleLogOut}"/>
-    </div>
+        <lightning:button class="greenbtn" variant="success" label="Log Out" onclick="{! c.handleLogOut}"/>
+
+    </lightning:card>
+
+    <!--<c.component/>-->
+    
 </aura:component>	

@@ -10,7 +10,7 @@
         // When the button is clicked the user is transferred to the Browsing page component.
         var evt = $A.get("e.force:navigateToComponent");
         evt.setParams({
-            componentDef : "c:myComponent",
+            componentDef : "c:browsePageContainer",
             componentAttributes: {
                 contactId : component.get("v.contact.Id")
             }
