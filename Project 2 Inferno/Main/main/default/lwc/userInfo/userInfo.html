@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <lightning-record-view-form
+            object-api-name={userApiName}
+            record-id={currentUserId}>
+            <lightning-output-field field-name={user_id}></lightning-output-field>
+            <lightning-output-field field-name={user_name}></lightning-output-field>
+            <lightning-output-field field-name={user_username}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

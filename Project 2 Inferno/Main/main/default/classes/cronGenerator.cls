@@ -1,6 +1,6 @@
 public class cronGenerator {
    public static List<String> createCron(Account a) {
-        Date serviceEndDate = a.Expiration_Date__c.addMonths(1).toStartOfMonth(); //First day of the next month
+        Date serviceEndDate = date.today().addMonths(1).toStartOfMonth(); //First day of the next month
         Integer expDay = serviceEndDate.day();
         Integer expMonth = serviceEndDate.month();
         Integer expYear = serviceEndDate.year();           
