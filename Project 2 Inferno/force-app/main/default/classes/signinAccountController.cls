@@ -16,12 +16,17 @@ public class signinAccountController {
     }
 
     @AuraEnabled(cacheable=false)
-    public static String makeAccount(string text){
+    public static List<String> searchResults(string text){
         List<Streaming_Content__c> searchresults = new List<Streaming_Content__c>();
         text = String.escapeSingleQuotes(text);
-        querytext = '%'+text+'%';
+        String querytext = '%'+text+'%';
 
         searchresults = [SELECT Id FROM Streaming_Content__c WHERE Title__c LIKE :querytext];
+        List<String> resultidlist = new List<String>();
+        for(Streaming_Content__c result : searchresults){
+            resultidlist.add((String)result.Id);
+        }
+        return resultidlist;
         
     }
 }
