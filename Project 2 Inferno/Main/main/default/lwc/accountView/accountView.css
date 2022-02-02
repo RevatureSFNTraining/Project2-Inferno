@@ -1,0 +1,31 @@
+@font-face {
+    /*
+        font family is used to give a name to the custom font,
+         you use this for referencing the custom font later
+    */
+    font-family: "Xmas font";
+ 
+    /*
+        This is the location of the Custom Font, note, I have stored in a ZIP file
+     */
+    src: url('/resource/Custom_Font/MountainsofChristmas-Bold.ttf') format('TrueType');
+ }
+
+h1 {
+    font-family: "Xmas font";
+    font-size: 25px;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.cardStyles {
+    --sds-c-card-color-background: cornflowerblue;
+    --sds-c-card-text-color: white;
+    --slds-text-color_default:white;
+}
+
+lightning-output-field {
+    --lwc-brandTextLink: white;
+    --lwc-inputStaticColor : white;
+    --lwc-colorTextLabel: white;
+}
