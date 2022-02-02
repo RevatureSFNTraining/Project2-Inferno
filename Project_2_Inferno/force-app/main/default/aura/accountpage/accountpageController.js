@@ -17,4 +17,13 @@
         });
         evt.fire()
     }
+
+    /*displayRecord : function (component, event, helper) {
+        var navEvt = $A.get("e.force:navigateToSObject");
+        navEvt.setParams({
+          "recordId": "",
+          "slideDevName": "related"
+        });
+        navEvt.fire();
+    }*/
 });
