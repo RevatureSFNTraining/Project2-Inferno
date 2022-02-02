@@ -2,6 +2,16 @@
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <classAccesses>
+        <apexClass>ProductHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductHelperTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+
+
+    <classAccesses>
         <apexClass>AcccountTriggerHelperTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -21,6 +31,7 @@
         <apexClass>cronGenerator</apexClass>
         <enabled>false</enabled>
     </classAccesses>
+
 
     <custom>true</custom>
     <fieldPermissions>
@@ -79,6 +90,13 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+
+        <editable>true</editable>
+        <field>Campaign.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+
         <editable>false</editable>
         <field>Campaign_Product__c.Product__c</field>
         <readable>true</readable>
@@ -427,6 +445,17 @@
     </fieldPermissions>
     <layoutAssignments>
 
+        <layout>Account-Jolly Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Campaign_Product__c-Campaign Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-Jolly Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+
+
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -434,12 +463,14 @@
         <layout>Campaign_Product__c-Campaign Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+
         <layout>Receipt__c-Receipt Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Streaming_Content__c-Streaming Content Layout</layout>
     </layoutAssignments>
     <objectPermissions>
+
 
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
@@ -456,6 +487,7 @@
         <allowRead>false</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Receipt__c</object>
+
 
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
@@ -475,6 +507,10 @@
         <object>Streaming_Content__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+
+    <tabVisibilities>
+        <tab>Accounts</tab>
+
 
     <userLicense>Salesforce</userLicense>
     <userPermissions>
@@ -505,6 +541,7 @@
 
     <tabVisibilities>
         <tab>Account_Page</tab>
+
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -512,10 +549,42 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+
+        <tab>Campaign_Products</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Campaigns</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Cases</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Cases1</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Help_Page</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Products</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+
         <tab>Receipt__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+
+        <tab>Receipts</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+
         <tab>Streaming_Content__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -535,6 +604,7 @@
     </userPermissions>
     <userPermissions>
 
+
         <enabled>false</enabled>
         <name>AllowEmailIC</name>
     </userPermissions>
@@ -544,15 +614,18 @@
     </userPermissions>
     <userPermissions>
 
+
         <enabled>true</enabled>
         <name>AllowUniversalSearch</name>
     </userPermissions>
     <userPermissions>
 
+
         <enabled>false</enabled>
         <name>AllowViewEditConvertedLeads</name>
     </userPermissions>
     <userPermissions>
+
 
         <enabled>true</enabled>
         <name>AllowViewKnowledge</name>
@@ -567,15 +640,18 @@
     </userPermissions>
     <userPermissions>
 
+
         <enabled>false</enabled>
         <name>AssignPermissionSets</name>
     </userPermissions>
     <userPermissions>
 
+
         <enabled>true</enabled>
         <name>AssignTopics</name>
     </userPermissions>
     <userPermissions>
+
 
         <enabled>false</enabled>
         <name>AuthorApex</name>
@@ -625,14 +701,17 @@
         <name>ChatterComposeUiCodesnippet</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>true</enabled>
         <name>ChatterEditOwnPost</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>false</enabled>
         <name>ChatterEditOwnRecordPost</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>true</enabled>
         <name>ChatterFileLink</name>
     </userPermissions>
@@ -649,6 +728,7 @@
         <name>ChatterOwnGroups</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>false</enabled>
         <name>CloseConversations</name>
     </userPermissions>
@@ -673,10 +753,12 @@
         <name>ContentHubUser</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>true</enabled>
         <name>ContentWorkspaces</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>false</enabled>
         <name>ConvertLeads</name>
     </userPermissions>
@@ -685,6 +767,7 @@
         <name>CreateCustomizeDashboards</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>true</enabled>
         <name>CreateCustomizeFilters</name>
     </userPermissions>
@@ -693,6 +776,7 @@
         <name>CreateCustomizeReports</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>false</enabled>
         <name>CreateDashboardFolders</name>
     </userPermissions>
@@ -717,10 +801,12 @@
         <name>CreateReportInLightning</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>true</enabled>
         <name>CreateTopics</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>false</enabled>
         <name>CreateWorkBadgeDefinition</name>
     </userPermissions>
@@ -753,10 +839,124 @@
         <name>DeleteTopics</name>
     </userPermissions>
     <userPermissions>
+
         <enabled>true</enabled>
         <name>DistributeFromPersWksp</name>
     </userPermissions>
     <userPermissions>
+
+        <enabled>true</enabled>
+        <name>EditEvent</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditOppLineItemUnitPrice</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTask</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EmailMass</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EmailSingle</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EnableCommunityAppLauncher</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EnableNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ExportReport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>FieldServiceAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningConsoleAllowedForUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ListEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>MassInlineEdit</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RemoveDirectMessageMembers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendSitRequests</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubmitMacrosAllowed</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeToLightningReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>TransactionalEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseWebLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewDeveloperName</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewHelpLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetup</name>
+    </userPermissions>
+
         <enabled>false</enabled>
         <name>EditActivatedOrders</name>
     </userPermissions>

@@ -1,6 +1,5 @@
 {
     "packageDirectories": [
-        
         {
             "path": "Main",
             "package": "main",
@@ -17,6 +16,7 @@
             "dependencies": [{"package": "main@0.1.0"}]
         }
         
+
     ],
     "name": "Project 2 Inferno",
     "namespace": "",
@@ -26,3 +26,4 @@
         "JC": "0Ho8c000000blLPCAY",
         "main": "0Ho8c000000blMXCAY"
     }
+}
