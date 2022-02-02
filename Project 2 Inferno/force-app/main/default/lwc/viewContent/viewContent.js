@@ -23,4 +23,12 @@ export default class ViewContent extends LightningElement {
             this.muted = true;
         }
     }
+
+    //If Movie ID passed through event
+    //Instead of accessed directly
+    handleMovieSelection(){
+        //Get Movie ID
+        //Use Movie ID to match it with it's Streaming Content
+        //Get the URL from the Streaming Content
+    }
 }

@@ -4,39 +4,39 @@
     },
 
     //Currently Unused
-    handleDisplay : function(cmp, query) {
-        if (query != null){
-            //Filter Movie Reels
-        }
-    },
+    // handleDisplay : function(component, query) {
+    //     if (query != null){
+    //         //Filter Movie Reels
+    //     }
+    // },
     
     checkSearch : function(component){
-        if (component.get("v.searchString") == ""){
-            return false;
+        if (component.get("v.searchString") == "" || component.get("v.searchString") == " "){
+            component.set("v.searching", false);
         }
         else{
-            return true;
+            component.set("v.searching", true);
         }
     },
 
-    redirectSignup : function(component){
-        var urlEvent = component.get("e.force:navigateToURL");
+    redirectSignup : function(){
+        var urlEvent = $A.get("e.force:navigateToURL");
         urlEvent.setParams({
             "url" : "/Signup"
         });
         urlEvent.fire();
     },
 
-    redirectHelp : function(component){
-        var urlEvent = component.get("e.force:navigateToURL");
+    redirectHelp : function(){
+        var urlEvent = $A.get("e.force:navigateToURL");
         urlEvent.setParams({
             "url" : "/Help"
         });
         urlEvent.fire();
     },
 
-    redirectWatch : function(component){
-        var urlEvent = component.get("e.force:navigateToURL");
+    redirectWatch : function(){
+        var urlEvent = $A.get("e.force:navigateToURL");
         urlEvent.setParams({
             "url" : "/Watch"
         });

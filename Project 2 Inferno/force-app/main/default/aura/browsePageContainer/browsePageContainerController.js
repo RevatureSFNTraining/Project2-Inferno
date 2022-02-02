@@ -4,23 +4,23 @@
     },
 
     //Currently Unused
-    handleDisplay : function (component, event, helper) {
-        helper.handleDisplay(component, event.data);
-    },
+    // handleDisplay : function (component, event, helper) {
+    //     helper.handleDisplay(component, event.data);
+    // },
 
-    checkSearch : function (component, helper){
+    checkSearch : function (component, event, helper){
         helper.checkSearch(component);
     },
 
-    redirectSignUp : function (component, helper){
+    redirectSignUp : function (component, event, helper){
         helper.redirectSignUp(component);
     },
 
-    redirectHelp : function (component, helper){
+    redirectHelp : function (component, event, helper){
         helper.redirectHelp(component);
     },
 
-    redirectWatch : function (component, helper){
+    redirectWatch : function (component, event, helper){
         helper.redirectWatch(component);
     }
 })

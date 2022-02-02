@@ -1,12 +1,13 @@
 <template>
-    <h2 onload={displayGenre}>{genre}</h2>
-    <template if:true={movies.data}>
-        <template for:each={reelMovieList.data} for:item="movie">
+    <h2>{genre}</h2>
+    <template if:true={movies}>
+        <template for:each={reelMovieList} for:item="movie">
             <c-movie-card key={movie.ID}
                            title={movie.Title__c}
                            videourl={movie.Video_URL__c} 
                            rating={movie.Viewer_Rating__c}
-                           movieid={movie.ID}></c-movie-card>
+                           movieid={movie.ID}
+                           onload={displayGenre}></c-movie-card>
         </template>
     </template>
     <template if:true={movies.error}>
