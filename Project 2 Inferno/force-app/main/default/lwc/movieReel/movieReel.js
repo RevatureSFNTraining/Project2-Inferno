@@ -8,7 +8,29 @@ export default class MovieReel extends LightningElement {
 
     @wire (getMovieList)
     movies;
+    reelMovieList;
 
-    @wire (getMovieSearchList)
-    pickyMovies;
+    displayGenre(){
+        this.reelMovieList = null;
+        this.movies.forEach(movie => {
+            if(movie.Genre__c == genre){
+                if(this.reelMovieList.length < 6){
+                    this.reelMovieList.add(movie);
+                }
+            }
+        });
+    }
+
+    displaySearch(){
+        this.reelMovieList = null;
+        this.movies.forEach(movie => {
+            //Check if title similar to searchString
+            //Add movie to reelMovieList
+            if(movie.Title__c.includes(this.searchString)){
+                if (this.reelMovieList.length < 6){
+                    this.reelMovieList.add(movie);
+                }
+            }
+        });
+    }
 }

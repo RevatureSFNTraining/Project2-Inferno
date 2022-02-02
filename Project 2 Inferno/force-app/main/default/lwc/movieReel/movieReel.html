@@ -1,7 +1,7 @@
 <template>
-    <h2>{genre}</h2>
+    <h2 onload={displayGenre}>{genre}</h2>
     <template if:true={movies.data}>
-        <template for:each={movies.data} for:item="movie">
+        <template for:each={reelMovieList.data} for:item="movie">
             <c-movie-card key={movie.ID}
                            title={movie.Title__c}
                            videourl={movie.Video_URL__c} 
