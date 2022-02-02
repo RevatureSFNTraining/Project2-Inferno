@@ -1,11 +1,17 @@
 <template>
+
+    <!--Israel Escobedo, Project 2, 02/03/2022-->
+
+    <!--Case Submission section for the Help page component.-->
     <div>
         <lightning-card  title="Case Submission"></lightning-card>
 
+        <!--Instructions for filling out a caseform and submitting.-->
         <p>Enter your complaint or request with your contact information in the case form below. Click the Submit button to submit your case to a customer service representative.
            We will contact via e-mail  about your case. Thank you.
         </p>
 
+        <!--Case submission form.-->
         <lightning-record-edit-form object-api-name="Case">
             <lightning-messages></lightning-messages>
 
@@ -21,6 +27,7 @@
 
             <lightning-input-field field-name="Status" value="New"></lightning-input-field>
 
+            <!--Button submits case form to Salesforce and displays a confirmation message with a random confirmation number.-->
             <lightning-button variant="success" type="submit" label="Submit" onclick={handleSubmit} class="slds-m-left_x-small"></lightning-button>
         </lightning-record-edit-form>
 
