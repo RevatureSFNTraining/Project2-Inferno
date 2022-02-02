@@ -1,0 +1,19 @@
+/*Israel Escobedo, Project 2, 02/03/2022*/
+
+.THIS {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 60px;
+    font-family:'XmasFont';
+}
+
+.THIS .greenbtn{
+    background-color: green;
+    color: white;
+    float: right;
+}
+
+@font-face{
+    font-family:'XmasFont';
+    src: url('/resource/XmasFont/MountainsofChristmas-Bold.ttf') format('TrueType');
+}
