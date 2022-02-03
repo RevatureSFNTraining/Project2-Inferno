@@ -1,3 +1,0 @@
-<aura:component>
-    <c:viewContent movieURL = 'https://i.imgur.com/eD0GH7N.jpeg'></c:viewContent>
-</aura:component>	

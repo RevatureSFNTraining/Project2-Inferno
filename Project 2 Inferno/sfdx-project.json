@@ -1,29 +1,16 @@
 {
-    "packageDirectories": [
-        {
-            "path": "Main",
-            "package": "main",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "default": false
-            
-        },{
-            "path": "force-app",
-            "default": true,
-            "package": "JC",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "dependencies": [{"package": "main@0.1.0"}]
-        }
-        
-
-    ],
-    "name": "Project 2 Inferno",
-    "namespace": "",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "52.0",
-    "packageAliases": {
-        "JC": "0Ho8c000000blLPCAY",
-        "main": "0Ho8c000000blMXCAY"
+  "packageDirectories": [
+    {
+      "path": "Main"
     }
+    ,{
+      "path": "force-app",
+      "default": true
+    }
+    
+  ],
+  "name": "Project 2 Inferno",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "52.0"
 }

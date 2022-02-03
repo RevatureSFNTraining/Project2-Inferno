@@ -1,7 +1,7 @@
 <!--Israel Escobedo, Project 2, 02/03/2022-->
 <!--Aura component of the Account page of the Jolly website.-->
 
-<aura:component>
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
     <lightning:card title="Jolly Account">
 
         <!--Button logs user out of the Account page to the Browser page.-->
