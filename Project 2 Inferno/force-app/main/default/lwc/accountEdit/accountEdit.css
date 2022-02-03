@@ -28,4 +28,6 @@ lightning-record-form {
     --lwc-brandTextLink: white;
     --lwc-inputStaticColor : white;
     --lwc-colorTextLabel: white;
+    --sds-c-input-text-color: black;
+    --sds-c-input-text-color-focus: black;
 }
