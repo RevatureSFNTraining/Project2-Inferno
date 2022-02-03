@@ -9,7 +9,7 @@ import CARD_STATUS_FIELD from '@salesforce/schema/Account.Card_Status__c';
 
 export default class CardView extends LightningElement {
     accountApiName = ACCOUNT_OBJECT;
-    currentAccountId = "001630000194XIxAAM";
+    currentAccountId = "0011100002CAJ6PAAX";
     a_nameOnCard = NAME_ON_CARD_FIELD;
     a_cardNumber = CARD_NUMBER_FIELD;
     a_cardType = CARD_TYPE_FIELD;

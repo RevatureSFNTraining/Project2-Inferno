@@ -1,0 +1,3 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <c:viewContent2 movieURL = 'https://i.imgur.com/eD0GH7N.jpeg'></c:viewContent2>
+</aura:component>	

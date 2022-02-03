@@ -8,6 +8,6 @@ import EXPIRATION_DATE_FIELD from '@salesforce/schema/Account.Expiration_Date__c
 
 export default class CardEdit extends LightningElement {
     accountApiName = ACCOUNT_OBJECT;
-    currentAccountId = "001630000194XIxAAM";
+    currentAccountId = "0011100002CAJ6PAAX";
     fields = [NAME_ON_CARD_FIELD, CARD_NUMBER_FIELD, CARD_TYPE_FIELD, CVV_FIELD, EXPIRATION_DATE_FIELD]
 }

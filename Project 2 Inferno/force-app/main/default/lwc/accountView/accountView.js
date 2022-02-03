@@ -9,7 +9,7 @@ import MEMBERSHIP_STATUS_FIELD from '@salesforce/schema/Account.Membership_Statu
 
 export default class AccountView extends LightningElement {
     accountApiName = ACCOUNT_OBJECT;
-    currentAccountId = "001630000194XIxAAM";
+    currentAccountId = "0011100002CAJ6PAAX";
     a_id = ID_FIELD;
     a_name = NAME_FIELD;
     a_email = EMAIL_FIELD;
